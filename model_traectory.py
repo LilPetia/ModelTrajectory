@@ -8,14 +8,14 @@ class trajectory:
     # start direction(alpha = 0) is direction is vector from center to enemy`s
     # goal. x0, y0 is coordinates from field`s center
     @staticmethod
-    def make_coordinates1(self, x0: float, y0: float, alpha: float,
+    def make_coordinates1(x0: float, y0: float, alpha: float,
                           dist: float) -> [int, int]:
         x1 = x0 + dist * cos(alpha)
         y1 = y0 + dist * sin(alpha)
         return [x1, y1]
 
     @staticmethod
-    def make_coordinates2(self, x0: float, y0: float, alpha: float,
+    def make_coordinates2(x0: float, y0: float, alpha: float,
                           dist: float, coefficients: [float, float, float,
                                                       float]) -> [int, int]:
         # List of coefficients for all directions. First direction is vector
