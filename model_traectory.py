@@ -20,7 +20,13 @@ class trajectory:
                                                       float]) -> [int, int]:
         # List of coefficients for all directions. First direction is vector
         # from center to enemу`s goal, the following follow  clockwise
-        if alpha < pi / 2 and alpha > pi / 2:
+        dist = float(dist)
+        x0 = float(x0)
+        y0 = float(y0)
+        coefficients = [float(i) for i in coefficients] 
+        #print(type(x0),type( dist),type( alpha),type(coefficients[0]), sep='/n')
+ #       alpha = pi /2
+        if alpha < pi / 2 and alpha >  - pi / 2:
             x1 = x0 + coefficients[0] * dist * cos(alpha)
             pass
         else:
